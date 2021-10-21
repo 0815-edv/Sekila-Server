@@ -34,17 +34,15 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author BackInBash
  */
-public class ServerSocket extends Thread {
+public class ServerThread extends Thread {
     private Socket socket;
  
-    public ServerSocket(Socket socket) {
+    public ServerThread(Socket socket) {
         this.socket = socket;
     }
  
