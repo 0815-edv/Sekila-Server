@@ -28,6 +28,7 @@ package de.edv.sekilaserver;
  * @author BackInBash
  */
 public class AppServer {
+
     public static void main(String[] args) {
         Config.UpdateConfig();
         new Server().start();

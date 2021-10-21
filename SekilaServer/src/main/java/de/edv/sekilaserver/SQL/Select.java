@@ -86,7 +86,7 @@ public class Select extends SQLConn {
         }
         return personenListe;
     }
-    
+
     public List<Stadt> cities() {
         open();
         PreparedStatement stm = null;

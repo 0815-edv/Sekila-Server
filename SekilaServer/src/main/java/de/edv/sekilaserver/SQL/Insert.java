@@ -57,7 +57,7 @@ public class Insert extends SQLConn {
             close();
         }
     }
-    
+
     public void city(Stadt stadt) {
         open();
         PreparedStatement stm = null;
@@ -77,7 +77,7 @@ public class Insert extends SQLConn {
             close();
         }
     }
-    
+
     public void person(Person person) {
         open();
         PreparedStatement stm = null;
@@ -98,5 +98,5 @@ public class Insert extends SQLConn {
             close();
         }
     }
-    
+
 }
