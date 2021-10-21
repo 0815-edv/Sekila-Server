@@ -21,41 +21,32 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package de.edv.sekilaserver.Model;
+package de.edv.sekilaserver.Modell;
 
 /**
  *
  * @author lorenz
  */
-public class Person {
+public class Stadt {
 
-    protected int customer_ID;
-    protected String customer_Firstname;
-    protected String customer_Lastname;
+    protected int city_ID;
+    protected String city_Bezeichnung;
     protected Action action;
 
-    public int getCustomer_ID() {
-        return customer_ID;
+    public int getCity_ID() {
+        return city_ID;
     }
 
-    public void setCustomer_ID(int customer_ID) {
-        this.customer_ID = customer_ID;
+    public void setCity_ID(int city_ID) {
+        this.city_ID = city_ID;
     }
 
-    public String getCustomer_Firstname() {
-        return customer_Firstname;
+    public String getCity_Bezeichnung() {
+        return city_Bezeichnung;
     }
 
-    public void setCustomer_Firstname(String customer_Firstname) {
-        this.customer_Firstname = customer_Firstname;
-    }
-
-    public String getCustomer_Lastname() {
-        return customer_Lastname;
-    }
-
-    public void setCustomer_Lastname(String customer_Lastname) {
-        this.customer_Lastname = customer_Lastname;
+    public void setCity_Bezeichnung(String city_Bezeichnung) {
+        this.city_Bezeichnung = city_Bezeichnung;
     }
 
     public void setAction(Action action) {
@@ -68,8 +59,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return " " + String.valueOf(customer_ID) + ": " + String.valueOf(customer_Firstname) + " " + String.valueOf(customer_Lastname);
-
+        return " " + String.valueOf(city_ID) + ":   " + String.valueOf(city_Bezeichnung);
     }
-
 }

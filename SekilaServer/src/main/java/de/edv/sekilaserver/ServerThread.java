@@ -23,9 +23,9 @@
  */
 package de.edv.sekilaserver;
 
-import de.edv.sekilaserver.Model.Land;
-import de.edv.sekilaserver.Model.Person;
-import de.edv.sekilaserver.Model.Stadt;
+import de.edv.sekilaserver.Modell.Land;
+import de.edv.sekilaserver.Modell.Person;
+import de.edv.sekilaserver.Modell.Stadt;
 import static de.edv.sekilaserver.Proto.Convert.deserialize;
 import java.io.BufferedReader;
 import java.io.IOException;

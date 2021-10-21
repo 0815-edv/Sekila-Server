@@ -21,44 +21,44 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package de.edv.sekilaserver.Model;
+package de.edv.sekilaserver.Modell;
 
 /**
  *
  * @author lorenz
  */
-public class Stadt {
+public class Land {
 
-    protected int city_ID;
-    protected String city_Bezeichnung;
+    protected int country_ID;
+    protected String country_Bezeichnung;
     protected Action action;
 
-    public int getCity_ID() {
-        return city_ID;
+    public int getCountry_ID() {
+        return country_ID;
     }
 
-    public void setCity_ID(int city_ID) {
-        this.city_ID = city_ID;
+    public void setCountry_ID(int country_ID) {
+        this.country_ID = country_ID;
     }
 
-    public String getCity_Bezeichnung() {
-        return city_Bezeichnung;
+    public String getCountry_Bezeichnung() {
+        return country_Bezeichnung;
     }
 
-    public void setCity_Bezeichnung(String city_Bezeichnung) {
-        this.city_Bezeichnung = city_Bezeichnung;
+    public void setCountry_Bezeichnung(String country_Bezeichnung) {
+        this.country_Bezeichnung = country_Bezeichnung;
     }
 
-    public void setAction(Action action) {
+    public void setAction(Action action){
         this.action = action;
     }
-
-    public Action getAction() {
+    
+    public Action getAction(){
         return action;
     }
-
+    
     @Override
     public String toString() {
-        return " " + String.valueOf(city_ID) + ":   " + String.valueOf(city_Bezeichnung);
+        return " " + String.valueOf(country_ID) + ":   " + String.valueOf(country_Bezeichnung);
     }
 }

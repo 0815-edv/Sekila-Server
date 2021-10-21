@@ -21,44 +21,55 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package de.edv.sekilaserver.Model;
+package de.edv.sekilaserver.Modell;
 
 /**
  *
  * @author lorenz
  */
-public class Land {
+public class Person {
 
-    protected int country_ID;
-    protected String country_Bezeichnung;
+    protected int customer_ID;
+    protected String customer_Firstname;
+    protected String customer_Lastname;
     protected Action action;
 
-    public int getCountry_ID() {
-        return country_ID;
+    public int getCustomer_ID() {
+        return customer_ID;
     }
 
-    public void setCountry_ID(int country_ID) {
-        this.country_ID = country_ID;
+    public void setCustomer_ID(int customer_ID) {
+        this.customer_ID = customer_ID;
     }
 
-    public String getCountry_Bezeichnung() {
-        return country_Bezeichnung;
+    public String getCustomer_Firstname() {
+        return customer_Firstname;
     }
 
-    public void setCountry_Bezeichnung(String country_Bezeichnung) {
-        this.country_Bezeichnung = country_Bezeichnung;
+    public void setCustomer_Firstname(String customer_Firstname) {
+        this.customer_Firstname = customer_Firstname;
     }
 
-    public void setAction(Action action){
+    public String getCustomer_Lastname() {
+        return customer_Lastname;
+    }
+
+    public void setCustomer_Lastname(String customer_Lastname) {
+        this.customer_Lastname = customer_Lastname;
+    }
+
+    public void setAction(Action action) {
         this.action = action;
     }
-    
-    public Action getAction(){
+
+    public Action getAction() {
         return action;
     }
-    
+
     @Override
     public String toString() {
-        return " " + String.valueOf(country_ID) + ":   " + String.valueOf(country_Bezeichnung);
+        return " " + String.valueOf(customer_ID) + ": " + String.valueOf(customer_Firstname) + " " + String.valueOf(customer_Lastname);
+
     }
+
 }

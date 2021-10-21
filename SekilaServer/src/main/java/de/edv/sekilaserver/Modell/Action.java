@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package de.edv.sekilaserver.Model;
+package de.edv.sekilaserver.Modell;
 
 /**
  *
