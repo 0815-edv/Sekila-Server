@@ -23,9 +23,6 @@
  */
 package de.edv.sekilaserver;
 
-import de.edv.sekilaserver.Modell.Land;
-import de.edv.sekilaserver.Modell.Person;
-import de.edv.sekilaserver.Modell.Stadt;
 import static de.edv.sekilaserver.Proto.Convert.serialize;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,42 +37,32 @@ import java.net.Socket;
  * @author BackInBash
  */
 public class ServerThread extends Thread {
+
     private Socket socket;
- 
+
     public ServerThread(Socket socket) {
         this.socket = socket;
     }
- 
+
     public void run() {
         try {
             InputStream input = socket.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
- 
+
             OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);
- 
- 
+
             Object data;
- 
+
             do {
                 data = serialize(input.readAllBytes());
+                new ActionHandler().execute(data);
                 writer.println("OK");
- 
+
             } while (!socket.isConnected());
-            
-            switch(data.getClass().getName()){
-                case "Land":
-                    Land land = (Land) data;
-                    // Impl Action
-                case "Person":
-                    Person person = (Person) data;
-                    // Impl Action
-                case "Stadt":
-                    Stadt stadt = (Stadt) data;
-                    // Impl Stadt
-            }
- 
+
             socket.close();
+
         } catch (IOException ex) {
             System.out.println("Server exception: " + ex.getMessage());
             ex.printStackTrace();
