@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2021 BackInBash.
+ * Copyright 2021 BaackInBash.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -25,51 +25,10 @@ package de.edv.sekilaserver.Model;
 
 /**
  *
- * @author lorenz
+ * @author BackInBash
  */
-public class Person {
-
-    protected int customer_ID;
-    protected String customer_Firstname;
-    protected String customer_Lastname;
-    protected Action action;
-
-    public int getCustomer_ID() {
-        return customer_ID;
-    }
-
-    public void setCustomer_ID(int customer_ID) {
-        this.customer_ID = customer_ID;
-    }
-
-    public String getCustomer_Firstname() {
-        return customer_Firstname;
-    }
-
-    public void setCustomer_Firstname(String customer_Firstname) {
-        this.customer_Firstname = customer_Firstname;
-    }
-
-    public String getCustomer_Lastname() {
-        return customer_Lastname;
-    }
-
-    public void setCustomer_Lastname(String customer_Lastname) {
-        this.customer_Lastname = customer_Lastname;
-    }
-
-    public void setAction(Action action) {
-        this.action = action;
-    }
-
-    public Action getAction() {
-        return action;
-    }
-
-    @Override
-    public String toString() {
-        return " " + String.valueOf(customer_ID) + ": " + String.valueOf(customer_Firstname) + " " + String.valueOf(customer_Lastname);
-
-    }
-
+public enum Action {
+    ADD,
+    UPDATE,
+    DELETE
 }

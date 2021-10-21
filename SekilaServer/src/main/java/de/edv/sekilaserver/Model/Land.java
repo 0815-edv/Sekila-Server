@@ -31,6 +31,7 @@ public class Land {
 
     protected int country_ID;
     protected String country_Bezeichnung;
+    protected Action action;
 
     public int getCountry_ID() {
         return country_ID;
@@ -48,6 +49,14 @@ public class Land {
         this.country_Bezeichnung = country_Bezeichnung;
     }
 
+    public void setAction(Action action){
+        this.action = action;
+    }
+    
+    public Action getAction(){
+        return action;
+    }
+    
     @Override
     public String toString() {
         return " " + String.valueOf(country_ID) + ":   " + String.valueOf(country_Bezeichnung);
