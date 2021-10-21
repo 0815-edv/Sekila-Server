@@ -26,7 +26,7 @@ package de.edv.sekilaserver;
 import de.edv.sekilaserver.Modell.Land;
 import de.edv.sekilaserver.Modell.Person;
 import de.edv.sekilaserver.Modell.Stadt;
-import static de.edv.sekilaserver.Proto.Convert.deserialize;
+import static de.edv.sekilaserver.Proto.Convert.serialize;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -58,7 +58,7 @@ public class ServerThread extends Thread {
             Object data;
  
             do {
-                data = deserialize(input.readAllBytes());
+                data = serialize(input.readAllBytes());
                 writer.println("OK");
  
             } while (!socket.isConnected());
@@ -77,9 +77,6 @@ public class ServerThread extends Thread {
  
             socket.close();
         } catch (IOException ex) {
-            System.out.println("Server exception: " + ex.getMessage());
-            ex.printStackTrace();
-        } catch (ClassNotFoundException ex) {
             System.out.println("Server exception: " + ex.getMessage());
             ex.printStackTrace();
         }
