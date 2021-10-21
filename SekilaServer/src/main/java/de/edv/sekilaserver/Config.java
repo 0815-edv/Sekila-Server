@@ -34,16 +34,11 @@ import java.nio.file.Paths;
  */
 public class Config {
 
-    private static String APIKEY;
     private static String DEFAULT_CONFIG = "SekilaServer.conf";
     private static String DB_IP;
     private static String DB_NAME;
     private static String DB_USER;
     private static String DB_PASSWORD;
-
-    public static String getApiKey() {
-        return APIKEY;
-    }
 
     public static String getDBIP() {
         return DB_IP;
@@ -70,7 +65,7 @@ public class Config {
         try {
             data = new String(Files.readAllBytes(Paths.get(DEFAULT_CONFIG)));
         } catch (IOException e) {
-            System.out.println("Cannot open config file: " + e.getMessage());
+            System.out.println("ERROR: Cannot open config file: " + e.getMessage());
             System.exit(1);
         }
         if (data == null) {
@@ -79,7 +74,6 @@ public class Config {
         }
         try {
             Config ConfigObject = gson.fromJson(data, Config.class);
-            APIKEY = ConfigObject.APIKEY;
             DB_IP = ConfigObject.DB_IP;
             DB_NAME = ConfigObject.DB_NAME;
             DB_USER = ConfigObject.DB_USER;
