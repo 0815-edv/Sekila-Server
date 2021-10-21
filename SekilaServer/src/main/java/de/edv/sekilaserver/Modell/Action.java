@@ -28,7 +28,8 @@ package de.edv.sekilaserver.Modell;
  * @author BackInBash
  */
 public enum Action {
-    ADD,
+    INSERT,
     UPDATE,
-    DELETE
+    DELETE,
+    SELECT
 }
