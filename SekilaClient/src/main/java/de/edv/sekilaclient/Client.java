@@ -7,9 +7,6 @@ package de.edv.sekilaclient;
 
 import java.net.*;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 /**
  *
@@ -39,8 +36,7 @@ public class Client {
 
             InputStream input = socket.getInputStream();
 
-            
-            byte[] result =  input.readAllBytes();
+            byte[] result = input.readAllBytes();
             socket.close();
             return result;
 

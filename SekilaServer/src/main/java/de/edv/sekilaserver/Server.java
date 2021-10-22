@@ -36,16 +36,16 @@ public class Server {
 
     private int port = 2048;
     private String ip;
-    
-    public Server(String ip, int port){
+
+    public Server(String ip, int port) {
         this.port = port;
         this.ip = ip;
     }
-    
-    public Server(){
-        
+
+    public Server() {
+
     }
-    
+
     /**
      * Run SocketServer
      */
