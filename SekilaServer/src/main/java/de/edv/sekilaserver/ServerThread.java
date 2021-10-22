@@ -31,6 +31,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -66,6 +68,11 @@ public class ServerThread extends Thread {
         } catch (IOException ex) {
             System.out.println("Server exception: " + ex.getMessage());
             ex.printStackTrace();
+            try {
+                socket.close();
+            } catch (IOException ex1) {
+                Logger.getLogger(ServerThread.class.getName()).log(Level.SEVERE, null, ex1);
+            }
         }
     }
 }
